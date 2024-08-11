@@ -5,16 +5,16 @@ const webMobileSkills = [
 ]
 
 const backendSkills = [
-  "NodeJS", "Java EE", "MySQL", "PL/SQL", "Elasticsearch", "Apache Spark", 
-  "Apache Kafka", "MongoDB", "BigQuery", "HBase", "Redis"
+  "NodeJS", "Java EE", "MySQL", "PL/SQL", "Elasticsearch", "Spark", 
+  "Kafka", "MongoDB", "BigQuery", "HBase", "Redis"
 ]
 
 const aiSkills = [
-  "Pytorch", "Langchain", "Langsmith", "Numpy", "Pandas"
+  "Pytorch", "Langchain", "Langsmith", "Numpy", "Pandas", "Vector DB"
 ]
 
 const cloudSkills = [
-  "AWS", "GCP", "Azure", "Oracle Cloud", "Terraform", "Serverless", 
+  "AWS", "GCP", "Azure", "Oracle Cloud", "Terraform", "Serverless", "Vercel", 
   "Docker", "Kubernetes"
 ]
 
@@ -30,57 +30,57 @@ const AboutSection = () => {
           My Skills
           <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
         </h1>
-        <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
+        <div className="space-y-10 md:space-y-6 md:p-4">
           <div>
-            <h1 className="text-2xl font-bold mb-6">Web/Mobile</h1>
-            <hr className="w-full h-1 my-4 bg-gray-300 border-0 rounded"></hr>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+            <h1 className="text-2xl font-bold mb-4">Web and Mobile</h1>
+            {/* <hr className="w-full h-1 my-2 bg-gray-300 border-0 rounded"></hr> */}
+            <div className="flex flex-wrap">
               {webMobileSkills.map((skill, idx) => (
-                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mb-2 text-gray-500 rounded font-semibold">
                   {skill}
                 </p>
               ))}
             </div>
           </div>
           <div>
-            <h1 className="text-2xl font-bold mb-6">Backend/Databases</h1>
-            <hr className="w-full h-1 my-4 bg-gray-300 border-0 rounded"></hr>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+            <h1 className="text-2xl font-bold mb-4">Backend and Databases</h1>
+            {/* <hr className="w-full h-1 my-2 bg-gray-300 border-0 rounded"></hr> */}
+            <div className="flex flex-wrap">
               {backendSkills.map((skill, idx) => (
-                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mb-2 text-gray-500 rounded font-semibold">
                   {skill}
                 </p>
               ))}
             </div>
           </div>
           <div>
-            <h1 className="text-2xl font-bold mb-6">AI</h1>
-            <hr className="w-full h-1 my-4 bg-gray-300 border-0 rounded"></hr>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+            <h1 className="text-2xl font-bold mb-4">AI</h1>
+            {/* <hr className="w-full h-1 my-2 bg-gray-300 border-0 rounded"></hr> */}
+            <div className="flex flex-wrap">
               {aiSkills.map((skill, idx) => (
-                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mb-2 text-gray-500 rounded font-semibold">
                   {skill}
                 </p>
               ))}
             </div>
           </div>
           <div>
-            <h1 className="text-2xl font-bold mb-6">Cloud Infra</h1>
-            <hr className="w-full h-1 my-4 bg-gray-300 border-0 rounded"></hr>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+            <h1 className="text-2xl font-bold mb-4">Cloud Infra</h1>
+            {/* <hr className="w-full h-1 my-2 bg-gray-300 border-0 rounded"></hr> */}
+            <div className="flex flex-wrap">
               {cloudSkills.map((skill, idx) => (
-                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mb-2 text-gray-500 rounded font-semibold">
                   {skill}
                 </p>
               ))}
             </div>
           </div>
           <div>
-            <h1 className="text-2xl font-bold mb-6">Languages</h1>
-            <hr className="w-full h-1 my-4 bg-gray-300 border-0 rounded"></hr>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+            <h1 className="text-2xl font-bold mb-4">Languages</h1>
+            {/* <hr className="w-full h-1 my-2 bg-gray-300 border-0 rounded"></hr> */}
+            <div className="flex flex-wrap">
               {languages.map((skill, idx) => (
-                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mb-2 text-gray-500 rounded font-semibold">
                   {skill}
                 </p>
               ))}
