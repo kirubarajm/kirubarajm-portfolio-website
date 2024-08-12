@@ -2,31 +2,50 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import { BsGithub } from "react-icons/bs"
+import { BiLogoFigma } from "react-icons/bi";
+import { RxVideo } from "react-icons/rx";
+import { FaGoogleScholar } from "react-icons/fa6";
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "Predictive Stock Modeling",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+      "Transformer based deep learning model integrating short term news sentiments with traditional technical indicators achieving 95% better prediction accuracy.",
+    image: "/project_1.png",
+    github: "https://github.com/kirubarajm/stock-predictive-model",
+    design: "",
+    thesis: "https://drive.google.com/file/d/159MrDcPCPRby6IWoAJysyVkLbKojDhio/view", 
+    demo: "https://www.youtube.com/watch?v=wbhHdZQHf4o",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "Daily Locally",
+    description: "A native Android mobile platform to buy and sell D2C food products powered by a highly scalable backend and web dashboard.",
+    image: "/project_2.png",
+    github: "https://github.com/kirubarajm/Daily-Locally",
+    design: "https://www.figma.com/proto/NCjc4TDdpTYRTUGgFgGlmK/Daily-Locally---Buy-and-Sell----Latest-Design?node-id=1-6426&t=8ok944674XFj41dO-1",
+    thesis: "", 
+    demo: "",
   },
   {
-    name: "Kator Family Photos",
+    name: "Eat From Home",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+      "A food delivery platform with independent Android apps for buyers, sellers and delivery partners, interconnected by a high performance backend.",
+    image: "/project_3.png",
+    github: "https://github.com/kirubarajm/Eat-From-Home",
+    design: "https://drive.google.com/file/d/1VnkZwpaO4FDFKSmNvc39gR7rIVN4z5fe/view?usp=sharing",
+    thesis: "", 
+    demo: "",
+  },
+  {
+    name: "Virtual Fit",
+    description:
+      "A full-stack web application powered by a ResNet based deep learning model to measure the human body with just 2 images.",
+    image: "/project_4.png",
+    github: "https://github.com/kirubarajm/Virtual-Fit",
+    design: "",
+    thesis: "https://drive.google.com/file/d/1r-OObVgUxO5v17NGptwF5FfihEU_Ze8E/view", 
+    demo: "https://youtu.be/rLPf4LVSUIE",
   },
 ]
 
@@ -37,15 +56,14 @@ const ProjectsSection = () => {
         Projects
         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
       </h1>
-
       <div className="flex flex-col space-y-28">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  <div className=" md:w-1/2">
-                    <Link href={project.link}>
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+                  <div className="md:w-1/2">
+                    <Link href={project.github} target="_blank" rel="noopener noreferrer">
                       <Image
                         src={project.image}
                         alt=""
@@ -61,18 +79,38 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
-                        <BsGithub
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
+                      {project.github && (
+                        <Link href={project.github} target="_blank">
+                          <BsGithub
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.design && (
+                        <Link href={project.design} target="_blank">
+                          <BiLogoFigma
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.thesis && (
+                        <Link href={project.thesis} target="_blank">
+                          <FaGoogleScholar
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.demo && (
+                        <Link href={project.demo} target="_blank">
+                          <RxVideo
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -80,7 +118,6 @@ const ProjectsSection = () => {
             </div>
           )
         })}
-        
       </div>
     </section>
   )
