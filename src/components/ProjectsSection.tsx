@@ -56,14 +56,13 @@ const ProjectsSection = () => {
         Projects
         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
       </h1>
-
       <div className="flex flex-col space-y-28">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  <div className=" md:w-1/2">
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+                  <div className="md:w-1/2">
                     <Link href={project.design}>
                       <Image
                         src={project.image}
@@ -80,18 +79,38 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
-                        <BsGithub
-                          size={40}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                      <Link href={project.design} target="_blank">
-                        <BiLogoFigma
-                          size={40}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
+                      {project.github && (
+                        <Link href={project.github} target="_blank">
+                          <BsGithub
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.design && (
+                        <Link href={project.design} target="_blank">
+                          <BiLogoFigma
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.thesis && (
+                        <Link href={project.thesis} target="_blank">
+                          <FaGoogleScholar
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+                      {project.demo && (
+                        <Link href={project.demo} target="_blank">
+                          <RxVideo
+                            size={40}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -99,7 +118,6 @@ const ProjectsSection = () => {
             </div>
           )
         })}
-        
       </div>
     </section>
   )
