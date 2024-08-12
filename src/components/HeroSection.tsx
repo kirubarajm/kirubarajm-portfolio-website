@@ -6,6 +6,21 @@ import { HiArrowDown } from "react-icons/hi"
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa"
 
 const HeroSection = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Resume_Kirubaraj_Manimathavan.pdf';
+    link.click();
+  };
+
+  const handleGithubRedirect = () => {
+    window.open('https://github.com/kirubarajm', '_blank');
+  };
+
+  const handleLinkedinRedirect = () => {
+    window.open('https://www.linkedin.com/in/kirubarajm/', '_blank');
+  };
+
   return (
     <section id="home">
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
@@ -35,13 +50,19 @@ const HeroSection = () => {
             for Mobile and Web
           </p>
           <div className="flex space-x-4">
-            <button className="flex items-center text-neutral-100 dark:text-gray-600 font-semibold px-6 py-3 bg-gray-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700">
+            <button 
+              onClick={handleDownload}
+              className="flex items-center text-neutral-100 dark:text-gray-600 font-semibold px-6 py-3 bg-gray-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700">
               <FaDownload className="mr-2" /> Resume
             </button>
-            <button className="flex items-center text-neutral-100 dark:text-black font-semibold px-6 py-3 bg-black dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-800">
+            <button 
+              onClick={handleGithubRedirect}
+              className="flex items-center text-neutral-100 dark:text-black font-semibold px-6 py-3 bg-black dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-800">
               <FaGithub className="mr-2" /> Github
             </button>
-            <button className="flex items-center text-neutral-100 dark:text-blue-600 font-semibold px-6 py-3 bg-blue-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-blue-700">
+            <button 
+              onClick={handleLinkedinRedirect}
+              className="flex items-center text-neutral-100 dark:text-blue-600 font-semibold px-6 py-3 bg-blue-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-blue-700">
               <FaLinkedin className="mr-2" /> LinkedIn
             </button>
           </div>

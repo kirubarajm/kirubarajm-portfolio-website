@@ -1,11 +1,11 @@
 import React from "react"
 
 const webMobileSkills = [
-  "ReactJS", "NextJS", "ExpressJS", "Android Java", "GraphQL", "Tailwind CSS", "Bootstrap", "HTML5"
+  "ReactJS", "NextJS", "Android Java", "GraphQL", "Tailwind CSS", "Bootstrap", "HTML5"
 ]
 
 const backendSkills = [
-  "NodeJS", "Java EE", "MySQL", "PL/SQL", "MongoDB", "Elasticsearch", "Spark", "Hadoop", "Kafka", "Samza", "BigQuery", "Redis"
+  "NodeJS", "ExpressJS", "Java EE", "MySQL", "PL/SQL", "MongoDB", "Elasticsearch", "Spark", "Hadoop", "Kafka", "Samza", "BigQuery", "Redis"
 ]
 
 const aiSkills = [
