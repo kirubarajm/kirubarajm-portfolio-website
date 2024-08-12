@@ -1,21 +1,19 @@
 import React from "react"
 
 const webMobileSkills = [
-  "ReactJS", "NextJS", "Android Java", "GraphQL", "Tailwind CSS", "HTML5"
+  "ReactJS", "NextJS", "ExpressJS", "Android Java", "GraphQL", "Tailwind CSS", "Bootstrap", "HTML5"
 ]
 
 const backendSkills = [
-  "NodeJS", "Java EE", "MySQL", "PL/SQL", "Elasticsearch", "Spark", 
-  "Kafka", "MongoDB", "BigQuery", "HBase", "Redis"
+  "NodeJS", "Java EE", "MySQL", "PL/SQL", "MongoDB", "Elasticsearch", "Spark", "Hadoop", "Kafka", "Samza", "BigQuery", "Redis"
 ]
 
 const aiSkills = [
-  "Pytorch", "Langchain", "Langsmith", "Numpy", "Pandas", "Vector DB"
+  "Pytorch", "Langchain", "RAG", "Vector DB", "Large Language Model", "Fine Tuning", "Agents", "Prompt Engineering", "Numpy", "Pandas"
 ]
 
 const cloudSkills = [
-  "AWS", "GCP", "Azure", "Oracle Cloud", "Terraform", "Serverless", "Vercel", 
-  "Docker", "Kubernetes"
+  "AWS", "GCP", "Azure", "Oracle Cloud", "Terraform", "Serverless", "Vercel", "Docker", "Kubernetes"
 ]
 
 const languages = [
@@ -65,7 +63,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div>
-            <h1 className="text-2xl font-bold mb-4">Cloud Infra</h1>
+            <h1 className="text-2xl font-bold mb-4">Cloud Infrastructure</h1>
             {/* <hr className="w-full h-1 my-2 bg-gray-300 border-0 rounded"></hr> */}
             <div className="flex flex-wrap">
               {cloudSkills.map((skill, idx) => (
