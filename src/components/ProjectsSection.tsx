@@ -40,12 +40,12 @@ const projects = [
   {
     name: "Virtual Fit",
     description:
-      "A full-stack web application powered by a ResNet based deep learning model to measure human body measurements with just 2 images.",
+      "A full-stack web application powered by a ResNet based deep learning model to measure the human body with just 2 images.",
     image: "/familyphotos.png",
-    github: "",
+    github: "https://github.com/kirubarajm/Virtual-Fit",
     design: "",
-    thesis: "", 
-    demo: "",
+    thesis: "https://drive.google.com/file/d/1r-OObVgUxO5v17NGptwF5FfihEU_Ze8E/view", 
+    demo: "https://youtu.be/rLPf4LVSUIE",
   },
 ]
 
