@@ -49,20 +49,20 @@ const HeroSection = () => {
             I build AI Agents and Full Stack Applications <br /> 
             for Mobile and Web
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
             <button 
               onClick={handleDownload}
-              className="flex items-center text-neutral-100 dark:text-gray-600 font-semibold px-6 py-3 bg-gray-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700">
+              className="flex items-center justify-center w-40 text-sm md:text-base text-neutral-100 dark:text-gray-600 font-semibold px-4 py-2 md:px-6 md:py-3 bg-gray-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700">
               <FaDownload className="mr-2" /> Resume
             </button>
             <button 
               onClick={handleGithubRedirect}
-              className="flex items-center text-neutral-100 dark:text-black font-semibold px-6 py-3 bg-black dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-800">
+              className="flex items-center justify-center w-40 text-sm md:text-base text-neutral-100 dark:text-black font-semibold px-4 py-2 md:px-6 md:py-3 bg-black dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-800">
               <FaGithub className="mr-2" /> Github
             </button>
             <button 
               onClick={handleLinkedinRedirect}
-              className="flex items-center text-neutral-100 dark:text-blue-600 font-semibold px-6 py-3 bg-blue-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-blue-700">
+              className="flex items-center justify-center w-40 text-sm md:text-base text-neutral-100 dark:text-blue-600 font-semibold px-4 py-2 md:px-6 md:py-3 bg-blue-600 dark:bg-neutral-100 rounded shadow hover:bg-gray-200 dark:hover:bg-blue-700">
               <FaLinkedin className="mr-2" /> LinkedIn
             </button>
           </div>
