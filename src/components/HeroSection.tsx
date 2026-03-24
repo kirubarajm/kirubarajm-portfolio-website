@@ -37,17 +37,24 @@ const HeroSection = () => {
         <div className="md:mt-2 md:w-3/5">
           <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">Hi, I&#39;m Kirubaraj</h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
-            A {" "}
+            An {" "}
             <span className="font-semibold text-teal-600 dark:text-teal-400">
-              Software Engineer{" "}
+              AI Software Engineer{" "}
             </span>
             and {" "}
             <span className="font-semibold text-teal-600 dark:text-teal-400">
               Entrepreneur
             </span>
             . <br />
-            I build AI Agents and Full Stack Applications <br /> 
-            for Mobile and Web
+            From{" "}
+            <span className="font-semibold">
+              Startup Founder
+            </span>{" "}
+            to building{" "}
+            <span className="font-semibold">
+              Agentic AI Infrastructure
+            </span>{" "}
+            at Amazon scale.
           </p>
           <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
             <button 
